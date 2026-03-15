@@ -3,8 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --lightPrimary: #F2F2F2;
-  --lightSecondary: #F2F2F2;
+  --lightPrimary: #f2f2f2;
+  --lightSecondary: #f2f2f2;
 }
 
 @theme inline {
@@ -13,7 +13,6 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-lightPrimary: var(--lightPrimary);
-
 }
 
 @media (prefers-color-scheme: dark) {
