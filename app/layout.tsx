@@ -31,7 +31,7 @@ export default function RootLayout({
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-black opacity-30"></div>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
         <Navbar />
         {children}
       </body>
