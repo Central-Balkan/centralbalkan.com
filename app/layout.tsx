@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="bg" className={inter.className}>
-      <body className="antialiased" style={{ minHeight: "200vh" }}>
+      <body className="antialiased">
         <Image
           className="absolute w-full h-screen object-cover"
           src="/background.png"
@@ -34,6 +34,12 @@ export default function RootLayout({
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <Navbar />
         {children}
+        <footer className="w-full py-4 text-center text-sm text-darkSecondary opacity-80 border-t border-darkPrimary mt-16">
+          <div>
+            &copy; {new Date().getFullYear()} Централен Балкан ЕООД. Всички
+            права запазени.
+          </div>
+        </footer>
       </body>
     </html>
   );

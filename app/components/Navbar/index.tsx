@@ -19,7 +19,7 @@ function classNames(...classes) {
 const Navbar = () => (
   <Disclosure
     as="nav"
-    className="fixed w-full bg-gray-800/50 backdrop-blur-md dark:bg-gray-800/30 dark:backdrop-blur-md dark:after:pointer-events-none dark:after:absolute dark:after:inset-x-0 dark:after:bottom-0 dark:after:h-px dark:after:bg-white/10 shadow-[0_8px_16px_rgba(255,255,255,0.1)]"
+    className="fixed w-full bg-gray-800/50 backdrop-blur-md dark:bg-gray-800/30 dark:backdrop-blur-md dark:after:pointer-events-none dark:after:absolute dark:after:inset-x-0 dark:after:bottom-0 dark:after:h-px dark:after:bg-white/10 shadow-[0_8px_16px_rgba(255,255,255,0.1)] z-100"
   >
     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div className="relative flex h-16 items-center justify-between">
