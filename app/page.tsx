@@ -19,10 +19,77 @@ const WhatWeOfferColumn = ({
   </div>
 );
 
+const ArticleHighlight = ({
+  image,
+  title,
+  description,
+  reverse = false,
+}: {
+  image: string;
+  title: string;
+  description: string;
+  reverse?: boolean;
+}) => (
+  <div
+    className={`flex flex-col gap-4 ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}
+  >
+    <img src={image} alt="article highlight" className="lg:w-1/2 sm:w-full" />
+    <div className="flex flex-col gap-2 flex-10 justify-center px-8">
+      <h3 className="text-xl font-semibold text-darkPrimary">{title}</h3>
+      <p className="text-base text-darkSecondary opacity-80">{description}</p>
+    </div>
+  </div>
+);
+
+const AboutUsSection = () => (
+  <div className="sm:w-full md:w-full m-auto w-full pb-8">
+    <h2 className="text-3xl font-bold tracking-tight text-darkPrimary z-10 text-left w-full my-8">
+      За нас
+    </h2>
+    <div className="flex flex-col gap-8 sm:flex-row sm:justify-around">
+      <WhatWeOfferColumn
+        img="/background.png"
+        title="Серийно производство"
+        description="Производство на големи серии метални детайли с висока точност и постоянство."
+      />
+      <WhatWeOfferColumn
+        img="/background.png"
+        title="Изработка по чертеж"
+        description="Изработваме метални изделия по техническа документация и индивидуални изисквания."
+      />
+      <WhatWeOfferColumn
+        img="/background.png"
+        title="30+ години опит"
+        description="Собствена производствена база в Габрово и дългогодишен опит в металообработването."
+      />
+    </div>
+  </div>
+);
+const ItemsCategoriesHighlightsSection = () => (
+  <div className="sm:w-full md:w-full m-auto">
+    <h2 className="text-3xl font-bold tracking-tight text-darkPrimaryz-10 text-left w-full my-8">
+      Артикули
+    </h2>
+    <div className="flex flex-col gap-12 lg:gap-0">
+      <ArticleHighlight
+        image="/furniture_bases.png"
+        title="Основи за мебели"
+        description="Произвеждаме основи за маси, столове, пейки и други."
+      />
+      <ArticleHighlight
+        image="/metal_plates.png"
+        title="Метални планки"
+        description="Метални планки за различни приложения, включително строителство и индустрия."
+        reverse={true}
+      />
+    </div>
+  </div>
+);
+
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center font-sans">
-      <main className="w-auto sm:max-w-3/4 md:max-w-3/4 sm:items-start">
+      <main className="w-auto max-w-3/4 lg:max-w-2/3 sm:items-start">
         <div className="flex gap-5 justify-center min-h-screen flex-col items-center py-32 px-16">
           <h1 className="text-5xl font-bold tracking-tight text-lightPrimary sm:text-7xl z-10 text-left w-full">
             Централен Балкан
@@ -36,28 +103,8 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className="sm:w-full md:w-full m-auto w-10/12">
-          <h2 className="text-2xl font-bold tracking-tight text-darkPrimary sm:text-5xl z-10 text-left w-full my-8">
-            Какво предлагаме?
-          </h2>
-          <div className="flex flex-col gap-8 sm:flex-row sm:justify-around">
-            <WhatWeOfferColumn
-              img="/background.png"
-              title="Серийно производство"
-              description="Производство на големи серии метални детайли с висока точност и постоянство."
-            />
-            <WhatWeOfferColumn
-              img="/background.png"
-              title="Изработка по чертеж"
-              description="Изработваме метални изделия по техническа документация и индивидуални изисквания."
-            />
-            <WhatWeOfferColumn
-              img="/background.png"
-              title="30+ години опит"
-              description="Собствена производствена база в Габрово и дългогодишен опит в металообработването."
-            />
-          </div>
-        </div>
+        <AboutUsSection />
+        <ItemsCategoriesHighlightsSection />
       </main>
     </div>
   );
