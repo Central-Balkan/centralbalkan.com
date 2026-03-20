@@ -4,12 +4,13 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const navigation = [
-  { name: "За нас", href: "#", current: true },
+  { name: "За нас", href: "/about", current: true },
   { name: "Услуги", href: "/services", current: false },
-  { name: "Артикули", href: "#", current: false },
-  { name: "Контакти", href: "#", current: false },
+  { name: "Артикули", href: "/items", current: false },
+  { name: "Контакти", href: "/contacts", current: false },
 ];
 
 function classNames(...classes: (string | undefined | null | false)[]): string {
@@ -39,13 +40,13 @@ const Navbar = () => (
           </DisclosureButton>
         </div>
         <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-          <div className="flex shrink-0 items-center">
+          <Link href="/" className="flex shrink-0 items-center">
             <img
               alt="Your Company"
               src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
               className="h-8 w-auto"
             />
-          </div>
+          </Link>
         </div>
         <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
           <div className="hidden sm:ml-6 sm:block">
