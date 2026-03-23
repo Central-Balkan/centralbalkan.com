@@ -11,7 +11,13 @@ const WhatWeOfferColumn = ({
   description: string;
 }) => (
   <div className="flex flex-col gap-6">
-    <img src={img} alt="background" className="w-full h-auto rounded-lg" />
+    <Image
+      src={img}
+      alt="background"
+      width={400}
+      height={300}
+      className="w-full h-auto rounded-lg"
+    />
 
     <div className="flex flex-col gap-2">
       <h3 className="text-xl font-semibold text-darkPrimary">{title}</h3>
@@ -20,7 +26,7 @@ const WhatWeOfferColumn = ({
   </div>
 );
 
-const ArticleHighlight = ({
+const ItemHighlight = ({
   image,
   title,
   description,
@@ -34,7 +40,13 @@ const ArticleHighlight = ({
   <div
     className={`flex flex-col gap-4 ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}
   >
-    <img src={image} alt="article highlight" className="lg:w-1/2 sm:w-full" />
+    <Image
+      src={image}
+      alt="article highlight"
+      width={400}
+      height={300}
+      className="lg:w-1/2 sm:w-full h-auto"
+    />
     <div className="flex flex-col gap-2 flex-10 justify-center px-8">
       <h3 className="text-xl font-semibold text-darkPrimary">{title}</h3>
       <p className="text-base text-darkSecondary opacity-80">{description}</p>
@@ -72,12 +84,12 @@ const ItemsCategoriesHighlightsSection = () => (
       Артикули
     </h2>
     <div className="flex flex-col gap-12 lg:gap-0">
-      <ArticleHighlight
+      <ItemHighlight
         image="/furniture_bases.png"
         title="Основи за мебели"
         description="Произвеждаме основи за маси, столове, пейки и други."
       />
-      <ArticleHighlight
+      <ItemHighlight
         image="/metal_plates.png"
         title="Метални планки"
         description="Метални планки за различни приложения, включително строителство и индустрия."
