@@ -1,5 +1,6 @@
 import { Button } from "@headlessui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const WhatWeOfferColumn = ({
   img,
@@ -10,13 +11,13 @@ const WhatWeOfferColumn = ({
   title: string;
   description: string;
 }) => (
-  <div className="flex flex-col gap-6">
+  <div className="flex flex-1 flex-col gap-6">
     <Image
       src={img}
       alt="background"
       width={400}
       height={300}
-      className="w-full h-auto rounded-lg"
+      className="w-full object-cover rounded-lg"
     />
 
     <div className="flex flex-col gap-2">
@@ -45,9 +46,9 @@ const ItemHighlight = ({
       alt="article highlight"
       width={400}
       height={300}
-      className="lg:w-1/2 sm:w-full h-auto"
+      className="lg:w-1/3 sm:w-full h-auto"
     />
-    <div className="flex flex-col gap-2 flex-10 justify-center px-8">
+    <div className="flex flex-col gap-2 flex-10 justify-center px-12">
       <h3 className="text-xl font-semibold text-darkPrimary">{title}</h3>
       <p className="text-base text-darkSecondary opacity-80">{description}</p>
     </div>
@@ -61,21 +62,26 @@ const AboutUsSection = () => (
     </h2>
     <div className="flex flex-col gap-8 sm:flex-row sm:justify-around">
       <WhatWeOfferColumn
-        img="/background.png"
+        img="/series.svg"
         title="Серийно производство"
         description="Производство на големи серии метални детайли с висока точност."
       />
       <WhatWeOfferColumn
-        img="/background.png"
+        img="/blueprint.svg"
         title="Изработка по чертеж"
         description="Изработваме метални изделия по техническа документация и индивидуални изисквания."
       />
       <WhatWeOfferColumn
-        img="/background.png"
+        img="/central_balkan_factory.svg"
         title="30+ години опит"
         description="Собствена производствена база в Габрово и дългогодишен опит в металообработването."
       />
     </div>
+    <Link href="/about" className="w-max">
+      <Button className="bg-black text-background z-10 py-2 px-4 rounded-lg text-left transition-colors duration-200 hover:bg-background hover:text-foreground mt-8 cursor-pointer">
+        Научи повече за нас
+      </Button>
+    </Link>
   </div>
 );
 const ItemsCategoriesHighlightsSection = () => (
@@ -85,7 +91,7 @@ const ItemsCategoriesHighlightsSection = () => (
     </h2>
     <div className="flex flex-col gap-12 lg:gap-0">
       <ItemHighlight
-        image="/furniture_bases.png"
+        image="/furniture_bases.svg"
         title="Основи за мебели"
         description="Произвеждаме основи за маси, столове, пейки и други."
       />
@@ -111,7 +117,7 @@ export default function Home() {
       />
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="flex min-h-screen items-center justify-center font-sans">
-        <main className="w-auto max-w-3/4 lg:max-w-2/3 sm:items-start">
+        <main className="w-auto min-w-2/3 max-w-3/4 lg:max-w-2/3 sm:items-start">
           <div className="flex gap-5 justify-center min-h-screen flex-col items-center py-32 md:px-16">
             <h1 className="text-5xl font-bold tracking-tight text-lightPrimary sm:text-7xl z-10 text-left w-full">
               Централен Балкан
