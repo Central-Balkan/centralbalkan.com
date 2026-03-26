@@ -28,26 +28,3 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter);
 }
-
-a {
-  color: var(--foreground);
-  text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease;
-  font-style: italic;
-}
-
-a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--foreground);
-  transition: width 0.3s ease;
-}
-
-a:hover::after {
-  width: 100%;
-}

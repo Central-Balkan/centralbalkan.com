@@ -19,11 +19,12 @@ const Service = ({
       alt="article highlight"
       width={400}
       height={300}
+      loaging="eager"
       className="lg:w-1/3 sm:w-full h-auto"
     />
     <div className="flex flex-col gap-8 flex-10 justify-center px-8">
       <h3 className="text-xl font-semibold text-darkPrimary">{title}</h3>
-      <p className="text-base text-darkSecondary opacity-80">{children}</p>
+      <div className="text-base text-darkSecondary opacity-80">{children}</div>
     </div>
   </div>
 );
