@@ -65,7 +65,7 @@ const ContactWidget = () => {
   const [copied, setCopied] = useState<string | null>(null);
 
   useEffect(() => {
-    function handleClickOutside(e) {
+    function handleClickOutside(e: MouseEvent) {
       // if click is NOT inside the panel → close
       if (panelRef.current && !panelRef.current.contains(e.target)) {
         close();
@@ -77,7 +77,7 @@ const ContactWidget = () => {
 
   const close = () => {
     setOpen(false);
-    setTimeout(() => setCopied(null), 300);
+    sehandleClickOutsidetTimeout(() => setCopied(null), 300);
   };
 
   const email = "centralbalkan2015@gmail.com";
