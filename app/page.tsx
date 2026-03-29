@@ -78,7 +78,7 @@ const AboutUsSection = () => (
       />
     </div>
     <Link href="/about" className="w-max">
-      <Button className="bg-black text-background z-10 py-2 px-4 rounded-lg text-left transition-colors duration-200 hover:bg-background hover:text-foreground mt-8 cursor-pointer">
+      <Button className="bg-foreground text-background z-10 py-2 px-4 rounded-lg text-left transition-colors duration-200 hover:bg-background hover:text-foreground mt-8 cursor-pointer">
         Научи повече за нас
       </Button>
     </Link>
@@ -126,7 +126,7 @@ export default function Home() {
               30 години опит в производството на метални изделия
             </h2>
             <div className="w-full z-10">
-              <Button className="bg-background text-darkPrimary z-10 py-2 px-2 rounded-lg text-left transition-colors duration-200 hover:bg-darkPrimary hover:text-background">
+              <Button className="bg-background text-darkPrimary z-10 py-2 px-2 rounded-lg text-left">
                 Свържи се с нас
               </Button>
             </div>
