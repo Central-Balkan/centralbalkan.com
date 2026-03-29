@@ -49,7 +49,7 @@ const AboutUs = () => {
               изисквания на клиента.
             </p>
 
-            <div className="p-6">
+            <div className="py-6">
               <h3 className="font-semibold mb-4">
                 Специализирани сме в производството на:
               </h3>
