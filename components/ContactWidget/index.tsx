@@ -61,24 +61,24 @@ const ContactRow = ({
 const ContactWidget = () => {
   const [open, setOpen] = useState(false);
   const [initialOpen, setInitialOpen] = useState(false);
-  const panelRef = useRef(null); // reference to the popup
+  const panelRef = useRef<HTMLDivElement | null>(null); // reference to the popup
   const [copied, setCopied] = useState<string | null>(null);
+
+  const close = () => {
+    setOpen(false);
+    setTimeout(() => setCopied(null), 300);
+  };
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       // if click is NOT inside the panel → close
-      if (panelRef.current && !panelRef.current.contains(e.target)) {
+      if (panelRef.current && !panelRef.current?.contains(e.target as Node)) {
         close();
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
-  const close = () => {
-    setOpen(false);
-    sehandleClickOutsidetTimeout(() => setCopied(null), 300);
-  };
 
   const email = "centralbalkan2015@gmail.com";
   const phoneNumber = "+359888366270";
