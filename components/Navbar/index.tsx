@@ -9,9 +9,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navigation = [
+  { name: "Начало", href: "/" },
   { name: "За нас", href: "/about" },
   { name: "Услуги", href: "/services" },
-  { name: "Артикули", href: "/items" },
   { name: "Контакти", href: "/contacts" },
 ];
 
@@ -21,7 +21,7 @@ function classNames(...classes: (string | undefined | null | false)[]): string {
 
 const Navbar = () => {
   const pathname = usePathname();
-  console.log(pathname);
+
   return (
     <Disclosure
       as="nav"
