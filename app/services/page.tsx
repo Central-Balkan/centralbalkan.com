@@ -12,18 +12,25 @@ const Service = ({
   reverse?: boolean;
 }) => (
   <div
-    className={`flex flex-col gap-12 ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}
+    className={`flex flex-col gap-10 ${
+      reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+    }`}
   >
-    <Image
-      src={image}
-      alt="article highlight"
-      width={400}
-      height={300}
-      loaging="eager"
-      className="lg:w-1/3 sm:w-full h-auto"
-    />
-    <div className="flex flex-col gap-8 flex-10 justify-center px-8">
-      <h3 className="text-xl font-semibold text-darkPrimary">{title}</h3>
+    <div className="relative lg:w-1/3 sm:w-full">
+      <Image
+        src={image}
+        alt="article highlight"
+        width={400}
+        height={300}
+        loading="eager"
+        className="w-full h-full"
+      />
+      <h3 className="absolute bottom-4 left-4 text-white text-xl font-semibold drop-shadow-lg">
+        {title}
+      </h3>
+    </div>
+
+    <div className="flex flex-col gap-6 flex-10 justify-center">
       <div className="text-base text-darkSecondary opacity-80">{children}</div>
     </div>
   </div>
@@ -47,45 +54,44 @@ const Services = () => {
         <div className="flex flex-col gap-12">
           <Service image="/CNC.svg" title="CNC лазерно рязане">
             <div>
-              Рязане на метални плочи и тръби с помощта на CNC лазерна
-              технология. Високо прецизни резки и гравиране за индустриални и
-              декоративни приложения.
+              <h3 className="font-semibold mb-4">
+                CNC лазерно рязане на метални листи и профили
+              </h3>
+              <div>
+                Рязане на метални листи и профили от стомана и алуминий с
+                дебелина до 15мм с помощта на CNC лазерна технология.
+              </div>
             </div>
           </Service>
           <Service image="/welding.jpg" title="Заваряване">
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Проектиране и заваряване на корпусно заварени тела</li>
-              <li>
-                Заваряване на конструкции (покриви, навеси, метални кутии и др.)
-              </li>
-              <li>
-                Заваряване на изделия от листова стомана и неръждаема стомана.
-              </li>
-            </ul>
+            <div>
+              <h3 className="font-semibold mb-4">
+                Предлагаме проектиране и заваряване на:
+              </h3>
+              <ul className="space-y-2 list-disc list-inside">
+                <li>корпусно заварени тела</li>
+                <li>
+                  конструкции - в т.ч. покриви, навеси, метални кутии и др.
+                </li>
+                <li>листова стомана</li>
+                <li>изделия от неръждаема стомана</li>
+              </ul>
+            </div>
           </Service>
-          <Service
-            image="/bending.jpg"
-            title="Рязане и огъване на метални листове"
-          >
-            <ul className="list-disc pl-5 space-y-1">
-              <li>
-                Разкрояване, огъване и обработка на листова ламарина – черна и
-                неръждаема
-              </li>
-              <li>
-                Разкрояване, огъване и обработка на кухи квадратни профили и
-                кръгли тръби
-              </li>
-              <li>
-                Обработка и разкрояване на П-образен горещо валцован метален
-                профил
-              </li>
-              <li>
-                Обработка и разкрояване на Т-образен горещо валцован метален
-                профил
-              </li>
-              <li>Разкрояване на UPN профили</li>
-            </ul>
+          <Service image="/bending.jpg" title="Рязане, огъване и обработка">
+            <div>
+              <h3 className="font-semibold mb-4">
+                Предлагаме рязане, огъване и обработка на:
+              </h3>
+              <ul className="space-y-2 list-disc list-inside">
+                <li>листова ламарина - черна и неръждаема</li>
+                <li>кухи квадратни профили</li>
+                <li>кръгли тръби</li>
+                <li>П-образен горещо валцован метален профил</li>
+                <li>Т-образен горещо валцован метален профил</li>
+                <li>UPN профили</li>
+              </ul>
+            </div>
           </Service>
         </div>
       </main>
