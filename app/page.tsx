@@ -78,7 +78,7 @@ const AboutUsSection = () => (
       />
     </div>
     <Link href="/about" className="w-max">
-      <Button className="bg-foreground text-background z-10 py-2 px-4 rounded-lg text-left transition-colors duration-200 hover:bg-background hover:text-foreground mt-8 cursor-pointer">
+      <Button className="bg-foreground text-background z-10 py-2 px-4 rounded-lg text-left transition-colors duration-200 hover:bg-background hover:text-foreground hover:border-2 mt-8 cursor-pointer">
         Научи повече за нас
       </Button>
     </Link>
