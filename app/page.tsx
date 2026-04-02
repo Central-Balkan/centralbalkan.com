@@ -2,6 +2,8 @@ import { Button } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollToArrow from "@/components/ScrollToArrow";
+import FadeInText from "@/components/FadeInText";
+import ContactUsButton from "@/components/ContactUsButton";
 
 const WhatWeOfferColumn = ({
   img,
@@ -63,6 +65,11 @@ const AboutUsSection = () => (
     </h2>
     <div className="flex flex-col gap-8 sm:flex-row sm:justify-around">
       <WhatWeOfferColumn
+        img="/central_balkan_factory.svg"
+        title="Централен Балкан ЕООД"
+        description="Собствена производствена база в Габрово и над 30 годишен опит в металообработването."
+      />
+      <WhatWeOfferColumn
         img="/series.svg"
         title="Серийно производство"
         description="Производство на големи серии метални детайли с висока точност."
@@ -71,11 +78,6 @@ const AboutUsSection = () => (
         img="/blueprint.svg"
         title="Изработка по чертеж"
         description="Изработваме метални изделия по техническа документация и индивидуални изисквания."
-      />
-      <WhatWeOfferColumn
-        img="/central_balkan_factory.svg"
-        title="30+ години опит"
-        description="Собствена производствена база в Габрово и дългогодишен опит в металообработването."
       />
     </div>
     <Link href="/about" className="w-max">
@@ -124,15 +126,17 @@ export default function Home() {
         <main className="main-content w-auto min-w-2/3 max-w-3/4 lg:max-w-2/3 sm:items-start">
           <div className="flex gap-5 justify-center min-h-screen flex-col items-center py-32 md:px-16">
             <h1 className="text-5xl font-bold tracking-tight text-lightPrimary sm:text-7xl z-10 text-left w-full">
-              Централен Балкан
+              <FadeInText text="Централен Балкан" duration={0.3} />
             </h1>
             <h2 className="text-xl font-normal text-lightPrimary dark:text-lightPrimary z-10 text-left w-full opacity-[.8]">
-              30 години опит в производството на метални изделия
+              <FadeInText
+                text="30 години опит в производството на метални изделия"
+                duration={0.3}
+                delay={0.1}
+              />
             </h2>
             <div className="w-full z-10">
-              <Button className="bg-background text-darkPrimary z-10 py-2 px-2 rounded-lg text-left">
-                Свържи се с нас
-              </Button>
+              <ContactUsButton />
             </div>
           </div>
           <AboutUsSection />
