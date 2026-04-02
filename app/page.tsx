@@ -1,6 +1,7 @@
 import { Button } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
+import ScrollToArrow from "@/components/ScrollToArrow";
 
 const WhatWeOfferColumn = ({
   img,
@@ -56,7 +57,7 @@ const ItemHighlight = ({
 );
 
 const AboutUsSection = () => (
-  <div className="sm:w-full md:w-full m-auto w-full pb-8">
+  <div id="aboutUs" className="sm:w-full md:w-full m-auto w-full pb-8 pt-12">
     <h2 className="text-3xl font-bold tracking-tight text-darkPrimary z-10 text-left w-full my-8">
       За нас
     </h2>
@@ -116,8 +117,11 @@ export default function Home() {
         height={1080}
       />
       <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20 animate-bounce z-30">
+        <ScrollToArrow querySelector="#aboutUs" />
+      </div>
       <div className="flex min-h-screen items-center justify-center font-sans">
-        <main className="w-auto min-w-2/3 max-w-3/4 lg:max-w-2/3 sm:items-start">
+        <main className="main-content w-auto min-w-2/3 max-w-3/4 lg:max-w-2/3 sm:items-start">
           <div className="flex gap-5 justify-center min-h-screen flex-col items-center py-32 md:px-16">
             <h1 className="text-5xl font-bold tracking-tight text-lightPrimary sm:text-7xl z-10 text-left w-full">
               Централен Балкан
