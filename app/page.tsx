@@ -142,21 +142,21 @@ const ItemsCategoriesHighlightsSection = () => (
 const PartnerItem = ({
   logo,
   name,
-  backgroundColor = "#fff",
+  backgroundColorClass = "bg-transparent",
   url,
 }: {
   logo: string;
   name: string;
-  backgroundColor?: string;
+  backgroundColorClass?: string;
   url?: string;
 }) => (
-  <div className="flex items-center gap-4">
+  <div className="flex flex-col lg:flex-row items-center gap-4">
     <Image
       src={logo}
       alt={`${name} logo`}
       width={400}
       height={300}
-      className={`lg:w-2/5 sm:w-full h-auto bg-[${backgroundColor}] p-4`}
+      className={`lg:w-2/5 sm:w-full h-auto ${backgroundColorClass} p-4`}
     />
     <div className="flex flex-col gap-2 flex-10 justify-center px-8">
       <h3 className="text-xl font-semibold text-darkPrimary">{name}</h3>
@@ -183,7 +183,7 @@ const PartnersSection = () => (
       <PartnerItem
         logo="/partner_niko_eood.png"
         name="Нико ЕООД"
-        backgroundColor="#1c203b"
+        backgroundColorClass="bg-[#1c203b]"
         url="https://metaligabrovo.com/"
       />
     </div>
