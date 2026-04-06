@@ -40,7 +40,7 @@ const Services = () => {
   return (
     <div>
       <Image
-        className="w-screen h-auto"
+        className="lg:w-screen lg:h-auto h-[50vh] object-cover"
         src="/services.svg"
         alt="CNC laser cutting"
         width={1920}
