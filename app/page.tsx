@@ -77,7 +77,7 @@ const ItemHighlight = ({
   >
     <Image
       src={image}
-      alt="article highlight"
+      alt="item highlight"
       width={400}
       height={300}
       className="lg:w-2/5 sm:w-full h-auto"
@@ -139,6 +139,57 @@ const ItemsCategoriesHighlightsSection = () => (
   </div>
 );
 
+const PartnerItem = ({
+  logo,
+  name,
+  backgroundColor = "#fff",
+  url,
+}: {
+  logo: string;
+  name: string;
+  backgroundColor?: string;
+  url?: string;
+}) => (
+  <div className="flex items-center gap-4">
+    <Image
+      src={logo}
+      alt={`${name} logo`}
+      width={400}
+      height={300}
+      className={`lg:w-2/5 sm:w-full h-auto bg-[${backgroundColor}] p-4`}
+    />
+    <div className="flex flex-col gap-2 flex-10 justify-center px-8">
+      <h3 className="text-xl font-semibold text-darkPrimary">{name}</h3>
+      {url && (
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-base text-darkSecondary opacity-80 hover:underline"
+        >
+          Посети сайта
+        </a>
+      )}
+    </div>
+  </div>
+);
+
+const PartnersSection = () => (
+  <div className="sm:w-full md:w-full m-auto">
+    <h2 className="text-3xl font-bold tracking-tight text-darkPrimary z-10 text-left w-full my-8">
+      Партньори
+    </h2>
+    <div className="flex flex-col gap-12">
+      <PartnerItem
+        logo="/partner_niko_eood.png"
+        name="Нико ЕООД"
+        backgroundColor="#1c203b"
+        url="https://metaligabrovo.com/"
+      />
+    </div>
+  </div>
+);
+
 export default function Home() {
   return (
     <>
@@ -149,9 +200,6 @@ export default function Home() {
         width={1920}
         height={1080}
       />
-      {/* <div className="z-10000000">
-        <AnimatedLogo />
-      </div> */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20 animate-bounce z-30">
         <ScrollToArrow querySelector="#aboutUs" />
@@ -175,6 +223,7 @@ export default function Home() {
           </div>
           <AboutUsSection />
           <ItemsCategoriesHighlightsSection />
+          <PartnersSection />
         </main>
       </div>
     </>
