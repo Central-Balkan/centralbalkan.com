@@ -4,6 +4,37 @@ import Link from "next/link";
 import ScrollToArrow from "@/components/ScrollToArrow";
 import FadeInText from "@/components/FadeInText";
 import ContactUsButton from "@/components/ContactUsButton";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Централен Балкан - CNC лазерно рязане и металообработка",
+  description:
+    "Централен Балкан ЕООД предлага CNC лазерно рязане, металообработка и производство на метални изделия по чертеж. Над 30 години опит в индустрията.",
+  keywords: [
+    "метални изделия",
+    "CNC лазерно рязане",
+    "металообработка",
+    "серийно производство",
+    "метални конструкции",
+    "основи за мебели",
+    "Габрово",
+    "фабрика за металообработка",
+  ],
+  authors: [{ name: "Централен Балкан" }],
+  creator: "Централен Балкан",
+  publisher: "Централен Балкан",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Централен Балкан - CNC лазерно рязане и металообработка",
+    description:
+      "Централен Балкан ЕООД предлага CNC лазерно рязане, металообработка и производство на метални изделия по чертеж. Над 30 години опит в индустрията.",
+    url: "https://centralbalkan.com",
+    siteName: "Централен Балкан",
+  },
+};
 
 const WhatWeOfferColumn = ({
   img,
@@ -49,9 +80,9 @@ const ItemHighlight = ({
       alt="article highlight"
       width={400}
       height={300}
-      className="lg:w-1/3 sm:w-full h-auto"
+      className="lg:w-2/5 sm:w-full h-auto"
     />
-    <div className="flex flex-col gap-2 flex-10 justify-center px-12">
+    <div className="flex flex-col gap-2 flex-10 justify-center px-8">
       <h3 className="text-xl font-semibold text-darkPrimary">{title}</h3>
       <p className="text-base text-darkSecondary opacity-80">{description}</p>
     </div>
@@ -92,9 +123,9 @@ const ItemsCategoriesHighlightsSection = () => (
     <h2 className="text-3xl font-bold tracking-tight text-darkPrimaryz-10 text-left w-full my-8">
       Артикули
     </h2>
-    <div className="flex flex-col gap-12 lg:gap-0">
+    <div className="flex flex-col gap-12">
       <ItemHighlight
-        image="/furniture_bases.svg"
+        image="/furniture_bases.png"
         title="Основи за мебели"
         description="Произвеждаме основи за маси, столове, пейки и други."
       />
@@ -118,6 +149,9 @@ export default function Home() {
         width={1920}
         height={1080}
       />
+      {/* <div className="z-10000000">
+        <AnimatedLogo />
+      </div> */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20 animate-bounce z-30">
         <ScrollToArrow querySelector="#aboutUs" />

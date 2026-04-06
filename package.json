@@ -16,7 +16,9 @@
     "pretier": "^0.0.1",
     "prettier": "^3.8.1",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-vivus": "^0.0.2",
+    "vivus": "^0.4.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
