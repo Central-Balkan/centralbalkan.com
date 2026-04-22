@@ -124,7 +124,7 @@ const AboutUsSection = () => (
 );
 
 const ServicesOverview = () => (
-  <div className=" border-y border-gray-100">
+  <div className="py-24 border-y border-gray-100">
     <h2 className="text-4xl font-bold tracking-tight text-darkPrimary mb-12 border-l-4 border-blue-600 pl-6">
       Производствени възможности
     </h2>
@@ -156,6 +156,12 @@ const ServicesOverview = () => (
         </div>
       ))}
     </div>
+    <Link href="/services" className="w-max">
+      <Button className="bg-white text-darkPrimary border-2 border-darkPrimary z-10 py-3 px-8 rounded-full text-left transition-all duration-200 hover:bg-gray-50 mt-12 cursor-pointer flex items-center gap-2 font-medium">
+        Разгледайте всички услуги
+        <ArrowRight size={18} />
+      </Button>
+    </Link>
   </div>
 );
 
@@ -266,6 +272,22 @@ export default function Home() {
           <ServicesOverview />
           <ItemsCategoriesHighlightsSection />
           <PartnersSection />
+
+          {/* Final CTA */}
+          <div className="mb-24 bg-darkPrimary rounded-3xl p-12 text-center text-white">
+            <h2 className="text-3xl text-[#333230] font-bold mb-6">
+              Готови ли сте да започнем вашия проект?
+            </h2>
+            <p className="text-xl opacity-90 text-[#333230] mb-8 max-w-2xl mx-auto">
+              Свържете се с нас днес за безплатна консултация и оферта.
+            </p>
+            <Link
+              href="/contacts"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full transition-colors text-lg"
+            >
+              Свържете се с нас
+            </Link>
+          </div>
         </main>
       </div>
     </>
