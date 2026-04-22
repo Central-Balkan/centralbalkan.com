@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ScrollToArrow from "@/components/ScrollToArrow";
 import FadeInText from "@/components/FadeInText";
+import { Scissors, Layers, Hammer, ArrowRight } from "lucide-react";
 import ContactUsButton from "@/components/ContactUsButton";
 import { Metadata } from "next";
 
@@ -55,7 +56,7 @@ const WhatWeOfferColumn = ({
     />
 
     <div className="flex flex-col gap-2">
-      <h3 className="text-xl font-semibold text-darkPrimary">{title}</h3>
+      <h3 className="text-2xl font-bold text-darkPrimary">{title}</h3>
       <p className="text-base text-darkSecondary opacity-80">{description}</p>
     </div>
   </div>
@@ -73,25 +74,27 @@ const ItemHighlight = ({
   reverse?: boolean;
 }) => (
   <div
-    className={`flex flex-col gap-4 ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}
+    className={`flex flex-col gap-8 items-center ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} bg-gray-50 rounded-3xl overflow-hidden border border-gray-100`}
   >
     <Image
       src={image}
       alt="item highlight"
-      width={400}
-      height={300}
-      className="lg:w-2/5 sm:w-full h-auto"
+      width={600}
+      height={400}
+      className="lg:w-1/2 w-full h-64 lg:h-96 object-cover"
     />
-    <div className="flex flex-col gap-2 flex-10 justify-center px-8">
-      <h3 className="text-xl font-semibold text-darkPrimary">{title}</h3>
-      <p className="text-base text-darkSecondary opacity-80">{description}</p>
+    <div className="flex flex-col gap-4 flex-1 justify-center p-8 lg:p-12">
+      <h3 className="text-3xl font-bold text-darkPrimary">{title}</h3>
+      <p className="text-lg text-darkSecondary opacity-80 leading-relaxed">
+        {description}
+      </p>
     </div>
   </div>
 );
 
 const AboutUsSection = () => (
-  <div id="aboutUs" className="sm:w-full md:w-full m-auto w-full pb-8 pt-12">
-    <h2 className="text-3xl font-bold tracking-tight text-darkPrimary z-10 text-left w-full my-8">
+  <div id="aboutUs" className="sm:w-full md:w-full m-auto w-full pb-16 pt-24">
+    <h2 className="text-4xl font-bold tracking-tight text-darkPrimary z-10 text-left w-full mb-12 border-l-4 border-blue-600 pl-6">
       За нас
     </h2>
     <div className="flex flex-col gap-8 sm:flex-row sm:justify-around">
@@ -112,16 +115,54 @@ const AboutUsSection = () => (
       />
     </div>
     <Link href="/about" className="w-max">
-      <Button className="bg-foreground text-background z-10 py-2 px-4 rounded-lg text-left transition-colors duration-200 hover:bg-background hover:text-foreground hover:border-2 mt-8 cursor-pointer">
+      <Button className="bg-black text-white z-10 py-3 px-8 rounded-full text-left transition-all duration-200 hover:bg-blue-700 mt-12 cursor-pointer flex items-center gap-2 font-medium">
         Научи повече за нас
+        <ArrowRight size={18} />
       </Button>
     </Link>
   </div>
 );
+
+const ServicesOverview = () => (
+  <div className=" border-y border-gray-100">
+    <h2 className="text-4xl font-bold tracking-tight text-darkPrimary mb-12 border-l-4 border-blue-600 pl-6">
+      Производствени възможности
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {[
+        {
+          icon: <Scissors className="w-10 h-10" />,
+          title: "CNC Лазерно Рязане",
+          desc: "Високопрецизно рязане на листов материал до 15мм.",
+        },
+        {
+          icon: <Layers className="w-10 h-10" />,
+          title: "Огъване на Абкант",
+          desc: "Сложно формоване на детайли с висока повторяемост.",
+        },
+        {
+          icon: <Hammer className="w-10 h-10" />,
+          title: "Заваряване",
+          desc: "Професионални заваръчни решения за индустрията.",
+        },
+      ].map((s, i) => (
+        <div
+          key={i}
+          className="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+        >
+          <div className="text-blue-600 mb-6">{s.icon}</div>
+          <h4 className="text-xl font-bold mb-3 text-darkPrimary">{s.title}</h4>
+          <p className="text-gray-600">{s.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
 const ItemsCategoriesHighlightsSection = () => (
-  <div className="sm:w-full md:w-full m-auto">
-    <h2 className="text-3xl font-bold tracking-tight text-darkPrimaryz-10 text-left w-full my-8">
-      Артикули
+  <div className="sm:w-full md:w-full m-auto py-24">
+    <h2 className="text-4xl font-bold tracking-tight text-darkPrimary z-10 text-left w-full mb-12 border-l-4 border-blue-600 pl-6">
+      Специализирани изделия
     </h2>
     <div className="flex flex-col gap-12">
       <ItemHighlight
@@ -154,12 +195,12 @@ const PartnerItem = ({
     <Image
       src={logo}
       alt={`${name} logo`}
-      width={400}
-      height={300}
-      className={`lg:w-2/5 sm:w-full h-auto ${backgroundColorClass} p-4`}
+      width={300}
+      height={150}
+      className={`lg:w-1/4 sm:w-full h-auto ${backgroundColorClass} p-6 rounded-xl`}
     />
     <div className="flex flex-col gap-2 flex-10 justify-center px-8">
-      <h3 className="text-xl font-semibold text-darkPrimary">{name}</h3>
+      <h3 className="text-2xl font-bold text-darkPrimary">{name}</h3>
       {url && (
         <a
           href={url}
@@ -175,9 +216,9 @@ const PartnerItem = ({
 );
 
 const PartnersSection = () => (
-  <div className="sm:w-full md:w-full m-auto">
-    <h2 className="text-3xl font-bold tracking-tight text-darkPrimary z-10 text-left w-full my-8">
-      Партньори
+  <div className="sm:w-full md:w-full m-auto py-24">
+    <h2 className="text-4xl font-bold tracking-tight text-darkPrimary z-10 text-left w-full mb-12 border-l-4 border-blue-600 pl-6">
+      Доверени партньори
     </h2>
     <div className="flex flex-col gap-12">
       <PartnerItem
@@ -222,6 +263,7 @@ export default function Home() {
             </div>
           </div>
           <AboutUsSection />
+          <ServicesOverview />
           <ItemsCategoriesHighlightsSection />
           <PartnersSection />
         </main>

@@ -1,4 +1,3 @@
-import ScrollToArrow from "@/components/ScrollToArrow";
 import Image from "next/image";
 import { ShieldCheck, Target, Users, Factory, Briefcase } from "lucide-react";
 
