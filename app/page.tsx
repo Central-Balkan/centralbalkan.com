@@ -74,7 +74,7 @@ const ItemHighlight = ({
   reverse?: boolean;
 }) => (
   <div
-    className={`flex flex-col gap-8 items-center ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} bg-gray-50 rounded-3xl overflow-hidden border border-gray-100`}
+    className={`flex flex-col gap-8 items-center ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} bg-gray-50 rounded-3xl overflow-hidden border border-gray-400`}
   >
     <Image
       src={image}
@@ -94,7 +94,7 @@ const ItemHighlight = ({
 
 const AboutUsSection = () => (
   <div id="aboutUs" className="sm:w-full md:w-full m-auto w-full pb-16 pt-24">
-    <h2 className="text-4xl font-bold tracking-tight text-darkPrimary z-10 text-left w-full mb-12 border-l-4 border-blue-600 pl-6">
+    <h2 className="lg:text-4xl text-2xl font-bold tracking-tight text-darkPrimary z-10 text-left w-full mb-12 border-l-4 border-blue-600 pl-6">
       За нас
     </h2>
     <div className="flex flex-col gap-8 sm:flex-row sm:justify-around">
@@ -124,8 +124,8 @@ const AboutUsSection = () => (
 );
 
 const ServicesOverview = () => (
-  <div className="py-24 border-y border-gray-100">
-    <h2 className="text-4xl font-bold tracking-tight text-darkPrimary mb-12 border-l-4 border-blue-600 pl-6">
+  <div className="lg:py-24 py-8 border-y border-gray-400">
+    <h2 className="lg:text-4xl text-xl font-bold tracking-tight text-darkPrimary mb-12 border-l-4 border-blue-600 pl-6">
       Производствени възможности
     </h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -148,7 +148,7 @@ const ServicesOverview = () => (
       ].map((s, i) => (
         <div
           key={i}
-          className="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+          className="p-8 bg-white rounded-2xl shadow-sm border border-gray-400 hover:shadow-md transition-shadow"
         >
           <div className="text-blue-600 mb-6">{s.icon}</div>
           <h4 className="text-xl font-bold mb-3 text-darkPrimary">{s.title}</h4>
@@ -167,7 +167,7 @@ const ServicesOverview = () => (
 
 const ItemsCategoriesHighlightsSection = () => (
   <div className="sm:w-full md:w-full m-auto py-24">
-    <h2 className="text-4xl font-bold tracking-tight text-darkPrimary z-10 text-left w-full mb-12 border-l-4 border-blue-600 pl-6">
+    <h2 className="lg:text-4xl text-xl  font-bold tracking-tight text-darkPrimary z-10 text-left w-full mb-12 border-l-4 border-blue-600 pl-6">
       Специализирани изделия
     </h2>
     <div className="flex flex-col gap-12">
