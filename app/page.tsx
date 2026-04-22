@@ -172,7 +172,7 @@ const ItemsCategoriesHighlightsSection = () => (
     </h2>
     <div className="flex flex-col gap-12">
       <ItemHighlight
-        image="/furniture_bases.png"
+        image="/furniture_bases.svg"
         title="Основи за мебели"
         description="Произвеждаме основи за маси, столове, пейки и други."
       />
