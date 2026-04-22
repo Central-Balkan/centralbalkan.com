@@ -30,7 +30,7 @@ const Service = ({
       </h3>
     </div>
 
-    <div className="flex flex-col gap-6 flex-10 justify-center">
+    <div className="flex flex-col gap-6 flex-10 justify-start mt-4 lg:mt-0">
       <div className="text-base text-darkSecondary opacity-80">{children}</div>
     </div>
   </div>
@@ -63,6 +63,7 @@ const Services = () => {
               </div>
             </div>
           </Service>
+          <hr className="border-t border-darkPrimary opacity-40" />
           <Service image="/welding.jpg" title="Заваряване">
             <div>
               <h3 className="font-semibold mb-4">
@@ -78,6 +79,8 @@ const Services = () => {
               </ul>
             </div>
           </Service>
+          <hr className="border-t border-darkPrimary opacity-40" />
+
           <Service image="/bending.jpg" title="Рязане, огъване и обработка">
             <div>
               <h3 className="font-semibold mb-4">
