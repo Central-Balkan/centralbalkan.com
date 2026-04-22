@@ -1,35 +1,38 @@
 import ScrollToArrow from "@/components/ScrollToArrow";
 import Image from "next/image";
+import { ShieldCheck, Target, Users, Factory, Briefcase } from "lucide-react";
 
 const AboutUs = () => {
   return (
     <>
-      <div className="absolute inset-0 height-100vh bg-black opacity-30 z-10"></div>
-      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20 animate-bounce z-30">
-        <ScrollToArrow querySelector="main" />
-      </div>
-      <div className="absolute flex min-h-screen items-center justify-center font-sans w-full">
-        <div className="w-auto">
-          <div className="flex gap-5 justify-center min-h-screen flex-col items-center py-32 md:px-16">
-            <h1 className="text-5xl font-bold tracking-tight text-lightPrimary sm:text-7xl z-10 w-full text-center">
+      <div className="relative h-[60vh] w-full overflow-hidden">
+        <Image
+          className="object-cover"
+          src="/central_balkan_factory.svg"
+          alt="CNC laser cutting factory"
+          fill
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/20 flex items-center">
+          <div className="max-w-7xl mx-auto w-full px-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6">
               За нас
             </h1>
+            <p className="text-xl text-white/90 max-w-2xl leading-relaxed border-l-4 border-blue-500 pl-6">
+              Традиция и иновации в металообработката. Повече от три десетилетия
+              градим доверие чрез качество и прецизност.
+            </p>
           </div>
         </div>
       </div>
-      <Image
-        className="relative w-full h-screen object-cover"
-        src="/central_balkan_factory.svg"
-        alt="CNC laser cutting"
-        priority
-        width={1920}
-        height={1080}
-      />
 
-      <main className=" relative w-auto max-w-3/4 lg:max-w-2/3 sm:items-start m-auto z-30 text-darkPrimary py-12">
-        <h2 className="text-3xl font-bold tracking-tight z-10 text-left w-full my-8">
-          За нас
-        </h2>
+      <main className="relative max-w-5xl mx-auto px-6 text-darkPrimary py-20">
+        <div className="flex items-center gap-4 mb-8">
+          <div className="h-1 w-12 bg-blue-600"></div>
+          <h2 className="text-4xl font-extrabold tracking-tight">
+            Кои сме ние?
+          </h2>
+        </div>
         <div className="text-lg z-10 text-left w-full mb-8">
           <div className="space-y-6">
             <p className="mb-4 leading-relaxed">
@@ -49,20 +52,73 @@ const AboutUs = () => {
               изисквания на клиента.
             </p>
 
-            <div className="py-6">
-              <h3 className="font-semibold mb-4">
-                Специализирани сме в производството на:
-              </h3>
-              <ul className="space-y-2 list-disc list-inside">
-                <li>основи за мебели</li>
-                <li>метални планки и конструкции</li>
-                <li>огради и парапети</li>
-                <li>стълбища и навеси</li>
-                <li>нестандартни изделия по проект на клиента</li>
-              </ul>
+            {/* B2B Value Props Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-8">
+              <div className="flex gap-4 p-6 bg-gray-50 rounded-xl border-l-4 border-blue-600">
+                <ShieldCheck className="text-blue-600 shrink-0" size={32} />
+                <div>
+                  <h4 className="font-bold text-xl mb-2">
+                    Гарантирано Качество
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Стриктен контрол на всеки етап от производството според
+                    индустриалните стандарти.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 p-6 bg-gray-50 rounded-xl border-l-4 border-blue-600">
+                <Target className="text-blue-600 shrink-0" size={32} />
+                <div>
+                  <h4 className="font-bold text-xl mb-2">Гъвкавост</h4>
+                  <p className="text-sm text-gray-600">
+                    Бърза адаптация към специфични технически изисквания и
+                    кратки срокове.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 p-6 bg-gray-50 rounded-xl border-l-4 border-blue-600">
+                <Users className="text-blue-600 shrink-0" size={32} />
+                <div>
+                  <h4 className="font-bold text-xl mb-2">B2B Партньорство</h4>
+                  <p className="text-sm text-gray-600">
+                    Дългосрочни взаимоотношения с преференциални условия за
+                    серийно производство.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 p-6 bg-gray-50 rounded-xl border-l-4 border-blue-600">
+                <Factory className="text-blue-600 shrink-0" size={32} />
+                <div>
+                  <h4 className="font-bold text-xl mb-2">Пълен Цикъл</h4>
+                  <p className="text-sm text-gray-600">
+                    От инженерен чертеж до финална обработка и логистика.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <p className="leading-relaxed">
+            <div className="bg-darkPrimary text-white p-10 rounded-3xl shadow-2xl my-12">
+              <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                <Briefcase className="text-blue-400" />
+                <span className="text-black"> Специализирани решения за:</span>
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  "Основи за мебели и интериорен дизайн",
+                  "Метални планки и крепежни елементи",
+                  "Индустриални огради и парапети",
+                  "Сложни стълбищни системи и навеси",
+                  "Нестандартни детайли по проект",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="h-2 w-2 bg-blue-500 rounded-full"></div>
+                    <span className="text-black">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p className="leading-relaxed text-xl">
               Благодарение на изградена мрежа от надеждни партньори в страната,
               можем да предложим цялостни решения – от идея и проектиране до
               изработка и доставка. Работим в тясно сътрудничество с нашите
@@ -70,13 +126,13 @@ const AboutUs = () => {
               срокове.
             </p>
 
-            <p className="leading-relaxed font-semibold italic">
+            <p className="leading-relaxed font-semibold italic text-blue-700 border-l-4 border-blue-700 pl-6 py-2">
               Нашата мисия е да бъдем дългосрочен и сигурен партньор за бизнеса,
               предоставяйки решения, които отговарят на най-високите
               индустриални изисквания.
             </p>
 
-            <p className="text-center font-semibold pt-4 border-t">
+            <p className="text-center font-bold text-2xl pt-12 text-darkPrimary">
               „Централен Балкан" – стабилност, прецизност и доверие в метала.
             </p>
           </div>

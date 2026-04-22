@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 const Contacts = () => {
   return (
     <div className="min-h-screen bg-white">
-      <div className="relative h-[40vh] lg:h-[50vh] w-full overflow-hidden">
+      <div className="relative h-[60vh] w-full overflow-hidden">
         <Image
           className="object-cover"
           src="/services.svg"
@@ -12,12 +12,12 @@ const Contacts = () => {
           fill
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-          <div className="max-w-7xl mx-auto w-full px-6 pb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/20 flex items-center">
+          <div className="max-w-7xl mx-auto w-full px-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6">
               Контакти
             </h1>
-            <p className="text-white/80 mt-4 text-lg max-w-2xl">
+            <p className="text-xl text-white/90 max-w-2xl leading-relaxed border-l-4 border-blue-500 pl-6">
               Свържете се с нас за запитвания, оферти и повече информация.
             </p>
           </div>
@@ -103,7 +103,7 @@ const Contacts = () => {
               height="100%"
               loading="lazy"
               title="Location Map"
-              className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-500"
+              className="w-full h-full border-0 hover:grayscale-0 transition-all duration-500"
             ></iframe>
           </div>
         </div>
