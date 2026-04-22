@@ -25,7 +25,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <main className="relative max-w-5xl mx-auto px-6 text-darkPrimary py-20">
+      <main className="relative max-w-7xl mx-auto px-6 text-darkPrimary py-20">
         <div className="flex items-center gap-4 mb-8">
           <div className="h-1 w-12 bg-blue-600"></div>
           <h2 className="text-4xl font-extrabold tracking-tight">
