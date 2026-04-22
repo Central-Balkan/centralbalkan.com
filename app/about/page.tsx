@@ -14,10 +14,10 @@ const AboutUs = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/20 flex items-center">
           <div className="max-w-7xl mx-auto w-full px-6">
-            <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6">
+            <h1 className="text-4xl md:text-7xl font-bold text-white tracking-tight mb-6">
               За нас
             </h1>
-            <p className="text-xl text-white/90 max-w-2xl leading-relaxed border-l-4 border-blue-500 pl-6">
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl leading-relaxed border-l-4 border-blue-500 pl-6">
               Традиция и иновации в металообработката. Повече от три десетилетия
               градим доверие чрез качество и прецизност.
             </p>
@@ -34,22 +34,30 @@ const AboutUs = () => {
         </div>
         <div className="text-lg z-10 text-left w-full mb-8">
           <div className="space-y-6">
-            <p className="mb-4 leading-relaxed">
-              „Централен Балкан" е утвърден производител на метални изделия с
-              над 30 години опит на българския пазар. През годините изградихме
-              стабилна репутация на надежден партньор, който съчетава традиции в
-              металообработката с модерни технологии и високи стандарти за
-              качество.
-            </p>
-
-            <p className="mb-4 leading-relaxed">
-              Разполагаме със съвременно оборудване и висококвалифициран екип,
-              което ни позволява да изпълняваме както единични, така и серийни
-              поръчки с прецизност, бързина и постоянство. Нашите производствени
-              възможности включват CNC лазерно рязане, огъване, заваряване и
-              цялостна обработка на метал, съобразена с индивидуалните
-              изисквания на клиента.
-            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
+              <div className="space-y-4">
+                <p className="leading-relaxed">
+                  <span className="font-bold text-blue-600">
+                    „Централен Балкан"
+                  </span>{" "}
+                  е утвърден производител на метални изделия с над 30 години
+                  опит на българския пазар. През годините изградихме стабилна
+                  репутация на надежден партньор.
+                </p>
+                <p className="leading-relaxed">
+                  Съчетаваме традициите в металообработката с модерни технологии
+                  и високи стандарти за качество, за да предложим най-доброто на
+                  нашите клиенти.
+                </p>
+              </div>
+              <div className="bg-blue-50 p-8 rounded-2xl border-l-8 border-blue-600">
+                <p className="italic text-gray-700">
+                  Разполагаме със съвременно оборудване и висококвалифициран
+                  екип, което ни позволява да изпълняваме както единични, така и
+                  серийни поръчки с прецизност, бързина и постоянство.
+                </p>
+              </div>
+            </div>
 
             {/* B2B Value Props Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-8">
@@ -96,7 +104,7 @@ const AboutUs = () => {
               </div>
             </div>
 
-            <div className="bg-darkPrimary text-white p-10 rounded-3xl shadow-2xl my-12">
+            <div className="bg-darkPrimary text-white p-10 rounded-3xl shadow-2xl my-14">
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
                 <Briefcase className="text-blue-400" />
                 <span className="text-black"> Специализирани решения за:</span>
