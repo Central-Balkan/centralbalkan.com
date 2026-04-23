@@ -13,7 +13,7 @@ const Service = ({
   reverse?: boolean;
 }) => (
   <div
-    className={`flex flex-col lg:flex-row gap-12 items-center py-12 ${
+    className={`flex flex-col lg:flex-row gap-12 items-center lg:py-12 py-6 ${
       reverse ? "lg:flex-row-reverse" : ""
     } border-b border-gray-100 last:border-0`}
   >
@@ -177,7 +177,7 @@ const Services = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-12 bg-darkPrimary rounded-3xl p-12 text-center text-white">
+        <div className="lg:mt-8 mt-4 bg-darkPrimary rounded-3xl p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-6">Имате специфичен проект?</h2>
           <p className="text-xl text-black mb-8 max-w-2xl mx-auto">
             Нашият инженерен екип е готов да ви съдейства от чертежа до готовото

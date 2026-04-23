@@ -98,7 +98,7 @@ const ItemHighlight = ({
 );
 
 const AboutUsSection = () => (
-  <div id="aboutUs" className="sm:w-full md:w-full m-auto w-full pb-16 pt-24">
+  <div id="aboutUs" className="sm:w-full md:w-full m-auto w-full pb-12 pt-24">
     <h2 className="lg:text-4xl text-2xl font-bold tracking-tight text-darkPrimary z-10 text-left w-full mb-12 border-l-4 border-blue-600 pl-6">
       За нас
     </h2>
@@ -171,7 +171,7 @@ const ServicesOverview = () => (
 );
 
 const ItemsCategoriesHighlightsSection = () => (
-  <div className="sm:w-full md:w-full m-auto py-24">
+  <div className="sm:w-full md:w-full m-auto lg:py-24 py-12">
     <h2 className="lg:text-4xl text-xl  font-bold tracking-tight text-darkPrimary z-10 text-left w-full mb-12 border-l-4 border-blue-600 pl-6">
       Специализирани изделия
     </h2>
@@ -227,7 +227,7 @@ const PartnerItem = ({
 );
 
 const PartnersSection = () => (
-  <div className="sm:w-full md:w-full m-auto py-24">
+  <div className="sm:w-full md:w-full m-auto lg:py-24 py-12">
     <h2 className="text-4xl font-bold tracking-tight text-darkPrimary z-10 text-left w-full mb-12 border-l-4 border-blue-600 pl-6">
       Доверени партньори
     </h2>
@@ -279,7 +279,7 @@ export default function Home() {
           <PartnersSection />
 
           {/* Final CTA */}
-          <div className="mb-24 bg-darkPrimary rounded-3xl p-12 text-center text-white">
+          <div className="mb-24 bg-darkPrimary rounded-3xl py-12 text-center text-white">
             <h2 className="text-3xl text-[#333230] font-bold mb-6">
               Готови ли сте да започнем вашия проект?
             </h2>

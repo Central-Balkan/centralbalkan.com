@@ -104,7 +104,7 @@ const AboutUs = () => {
               </div>
             </div>
 
-            <div className="bg-darkPrimary text-white p-10 rounded-3xl shadow-2xl my-14">
+            <div className="bg-darkPrimary text-white p-10 rounded-3xl shadow-2xl lg:my-14 my-8">
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
                 <Briefcase className="text-blue-400" />
                 <span className="text-black"> Специализирани решения за:</span>
