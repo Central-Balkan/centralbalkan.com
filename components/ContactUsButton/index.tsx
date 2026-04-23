@@ -13,11 +13,10 @@ const ContactUsButton = () => {
   return (
     <Link href="/contacts">
       <button
-        className={`bg-background text-darkPrimary z-10 py-2 px-2 rounded-lg text-left cursor-pointer
-      transition-opacity duration-200 ease-in
+        className={`bg-white text-[#333230] z-10 py-3 px-8 rounded-full text-left transition-all duration-200 border border-transparent hover:bg-[#333230] hover:text-white hover:border-white mt-12 cursor-pointer flex items-center gap-2 font-medium
       ${visible ? "opacity-100" : "opacity-0"}`}
       >
-        Свържи се с нас
+        Свържете се с нас
       </button>
     </Link>
   );
