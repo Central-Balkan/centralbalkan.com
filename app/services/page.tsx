@@ -185,7 +185,7 @@ const Services = () => {
           </p>
           <a
             href="/contacts"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full transition-colors text-lg"
+            className="bg-[#333230] text-white z-10 py-4 px-10 rounded-full text-left transition-all duration-200 border border-transparent hover:bg-white hover:text-[#333230] hover:border-[#333230] mt-16 cursor-pointer items-center gap-2 font-medium"
           >
             Поискайте оферта
           </a>

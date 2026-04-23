@@ -3,7 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import ScrollToArrow from "@/components/ScrollToArrow";
 import FadeInText from "@/components/FadeInText";
-import { Scissors, Layers, Hammer, ArrowRight } from "lucide-react";
+import {
+  LineSquiggle,
+  BetweenVerticalStart,
+  Flame,
+  ArrowRight,
+} from "lucide-react";
 import ContactUsButton from "@/components/ContactUsButton";
 import { Metadata } from "next";
 
@@ -115,7 +120,7 @@ const AboutUsSection = () => (
       />
     </div>
     <Link href="/about" className="w-max">
-      <Button className="bg-black text-white z-10 py-3 px-8 rounded-full text-left transition-all duration-200 hover:bg-blue-700 mt-12 cursor-pointer flex items-center gap-2 font-medium">
+      <Button className="bg-[#333230] text-white z-10 py-3 px-8 rounded-full text-left transition-all duration-200 border border-transparent hover:bg-white hover:text-[#333230] hover:border-[#333230] mt-12 cursor-pointer flex items-center gap-2 font-medium">
         Научи повече за нас
         <ArrowRight size={18} />
       </Button>
@@ -131,17 +136,17 @@ const ServicesOverview = () => (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {[
         {
-          icon: <Scissors className="w-10 h-10" />,
+          icon: <LineSquiggle className="w-10 h-10" />,
           title: "CNC Лазерно Рязане",
           desc: "Високопрецизно рязане на листов материал до 15мм.",
         },
         {
-          icon: <Layers className="w-10 h-10" />,
+          icon: <BetweenVerticalStart className="w-10 h-10" />,
           title: "Огъване на Абкант",
           desc: "Сложно формоване на детайли с висока повторяемост.",
         },
         {
-          icon: <Hammer className="w-10 h-10" />,
+          icon: <Flame className="w-10 h-10" />,
           title: "Заваряване",
           desc: "Професионални заваръчни решения за индустрията.",
         },
@@ -157,7 +162,7 @@ const ServicesOverview = () => (
       ))}
     </div>
     <Link href="/services" className="w-max">
-      <Button className="bg-white text-darkPrimary border-2 border-darkPrimary z-10 py-3 px-8 rounded-full text-left transition-all duration-200 hover:bg-gray-50 mt-12 cursor-pointer flex items-center gap-2 font-medium">
+      <Button className="bg-[#333230] text-white z-10 py-3 px-8 rounded-full text-left transition-all duration-200 border border-transparent hover:bg-white hover:text-[#333230] hover:border-[#333230] mt-12 cursor-pointer flex items-center gap-2 font-medium">
         Разгледайте всички услуги
         <ArrowRight size={18} />
       </Button>
@@ -283,7 +288,7 @@ export default function Home() {
             </p>
             <Link
               href="/contacts"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full transition-colors text-lg"
+              className="bg-[#333230] text-white z-10 py-4 px-10 rounded-full text-lg transition-all duration-200 border border-transparent hover:bg-white hover:text-[#333230] hover:border-[#333230] mt-12 cursor-pointer  gap-2 font-medium"
             >
               Свържете се с нас
             </Link>
