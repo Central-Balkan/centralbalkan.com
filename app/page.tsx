@@ -72,6 +72,7 @@ const WhatWeOfferColumn = ({
       width={400}
       height={300}
       className="w-full object-cover rounded-lg"
+      loading="lazy"
     />
 
     <div className="flex flex-col gap-2">
@@ -101,6 +102,7 @@ const ItemHighlight = ({
       width={600}
       height={400}
       className="lg:w-1/2 w-full h-64 lg:h-96 object-cover"
+      loading="lazy"
     />
     <div className="flex flex-col gap-4 flex-1 justify-center p-8 lg:p-12">
       <h3 className="text-3xl font-bold text-darkPrimary">{title}</h3>
@@ -223,6 +225,7 @@ const PartnerItem = ({
       width={300}
       height={150}
       className={`lg:w-1/4 sm:w-full h-auto ${backgroundColorClass} p-6 rounded-xl`}
+      loading="lazy"
     />
     <div className="flex flex-col gap-2 flex-10 justify-center px-8">
       <h3 className="text-2xl font-bold text-darkPrimary">{name}</h3>
@@ -265,6 +268,7 @@ export default function Home() {
         alt="CNC лазерно рязане"
         width={1920}
         height={1080}
+        priority
       />
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20 animate-bounce z-30">
