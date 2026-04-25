@@ -39,6 +39,20 @@ export const metadata: Metadata = {
       "Централен Балкан ЕООД предлага CNC лазерно рязане, металообработка и производство на метални изделия по чертеж. Над 30 години опит в индустрията.",
     url: "https://centralbalkan.com",
     siteName: "Централен Балкан",
+    images: [
+      {
+        url: "/background.png",
+      },
+    ],
+    locale: "bg_BG",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Централен Балкан - CNC лазерно рязане и металообработка",
+    description:
+      "Над 30 години опит в производството на метални изделия и CNC лазерно рязане.",
+    images: ["/background.png"],
   },
 };
 
