@@ -281,18 +281,10 @@ export default function Home() {
         <main className="main-content w-auto min-w-2/3 max-w-3/4 lg:max-w-2/3 sm:items-start">
           <div className="flex gap-5 justify-center min-h-screen flex-col items-center py-32 md:px-16">
             <div className="text-5xl font-bold tracking-tight text-lightPrimary sm:text-7xl z-10 text-left w-full">
-              <FadeInText
-                text="Централен Балкан"
-                duration={0.3}
-                header={true}
-              />
+              <h1>Централен Балкан</h1>
             </div>
             <h2 className="text-xl font-normal text-lightPrimary dark:text-lightPrimary z-10 text-left w-full opacity-[.8]">
-              <FadeInText
-                text="30 години опит в производството на метални изделия"
-                duration={0.3}
-                delay={0.1}
-              />
+              30 години опит в производството на метални изделия
             </h2>
             <div className="w-full z-10">
               <ContactUsButton />
