@@ -11,6 +11,7 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://centralbalkan.com"),
   title: "Централен Балкан | CNC лазерно рязане и металообработка",
   description:
     "Професионално CNC лазерно рязане и металообработка от Централен Балкан ЕООД. Над 30 години опит в серийното производство на метални изделия по чертеж.",
