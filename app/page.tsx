@@ -128,7 +128,7 @@ const AboutUsSection = () => (
         description="Собствена производствена база в Габрово и над 30 годишен опит в металообработването."
       />
       <WhatWeOfferColumn
-        img="/series.svg"
+        img="/series.jpg"
         title="Серийно производство"
         description="Производство на големи серии метални детайли с висока точност."
       />
@@ -196,7 +196,7 @@ const ItemsCategoriesHighlightsSection = () => (
     </h2>
     <div className="flex flex-col gap-12">
       <ItemHighlight
-        image="/furniture_bases.svg"
+        image="/furniture_base.jpg"
         title="Основи за мебели"
         description="Произвеждаме основи за маси, столове, пейки и други."
       />
