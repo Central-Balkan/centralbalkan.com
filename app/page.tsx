@@ -295,10 +295,12 @@ export default function Home() {
               <ContactUsButton />
             </div>
           </div>
-          <AboutUsSection />
-          <ServicesOverview />
-          <ItemsCategoriesHighlightsSection />
-          <PartnersSection />
+          <div className="max-w-7xl m-auto">
+            <AboutUsSection />
+            <ServicesOverview />
+            <ItemsCategoriesHighlightsSection />
+            <PartnersSection />
+          </div>
 
           {/* Final CTA */}
           <div className="mb-24 bg-darkPrimary rounded-3xl py-12 text-center text-white">
