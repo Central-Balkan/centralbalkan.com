@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ContactWidget from "@/components/ContactWidget";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -34,6 +35,9 @@ export default function RootLayout({
           </div>
         </footer>
       </body>
+      {process.env.NODE_ENV === "production" && (
+        <GoogleAnalytics gaId="G-BTN62T8RHN" />
+      )}
     </html>
   );
 }
