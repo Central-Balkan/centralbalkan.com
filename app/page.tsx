@@ -2,14 +2,12 @@ import { Button } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollToArrow from "@/components/ScrollToArrow";
-import FadeInText from "@/components/FadeInText";
 import {
   LineSquiggle,
   BetweenVerticalStart,
   Flame,
   ArrowRight,
 } from "lucide-react";
-import ContactUsButton from "@/components/ContactUsButton";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -287,7 +285,11 @@ export default function Home() {
               30 години опит в производството на метални изделия
             </h2>
             <div className="w-full z-10">
-              <ContactUsButton />
+              <Link href="/contacts">
+                <button className="bg-white text-[#333230] z-10 py-3 px-8 rounded-full text-left transition-all duration-200 border border-transparent hover:bg-[#333230] hover:text-white hover:border-white mt-12 cursor-pointer flex items-center gap-2 font-medium">
+                  Свържете се с нас
+                </button>
+              </Link>{" "}
             </div>
           </div>
           <div className="max-w-7xl m-auto">
